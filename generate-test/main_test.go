@@ -12,6 +12,22 @@ func TestAvg(t *testing.T) {
 		want int
 	}{
 		// TODO: Add test cases.
+		{
+			args: args{
+				nos: []int{2, 2},
+			},
+			want: 2,
+		}, {
+			args: args{
+				nos: []int{-1, 0, 1},
+			},
+			want: 0,
+		}, {
+			args: args{
+				nos: []int{-4, -4, -4, -4},
+			},
+			want: -4,
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
